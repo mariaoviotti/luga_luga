@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Luga Luga</string>
+    <string name="label">email</string>
+    <string name="label2">senha</string>
 </resources>
