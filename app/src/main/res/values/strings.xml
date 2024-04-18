@@ -2,4 +2,8 @@
     <string name="app_name">Luga Luga</string>
     <string name="label">email</string>
     <string name="label2">senha</string>
+    <string name="hint_email">e-mail</string>
+    <string name="hint_senha">senha</string>
+    <string name="btnLogin">Login</string>
+    <string name="btnEsqueci">Esquici a senha</string>
 </resources>
