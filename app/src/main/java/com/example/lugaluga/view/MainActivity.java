@@ -13,22 +13,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.lugaluga.Produto;
 import com.example.lugaluga.R;
+import com.example.lugaluga.view.adapter.AdapterProduto;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private RecyclerView recyclerView;
+    private AdapterProduto adapterProduto;
 
-   private ListView listCidade;
-   private String[] cidades = {
-           "são Carlos", "Araraquara" , "Ibaté",
-           "Ribeiráo Bonito", "Dourado", "Descalvado",
-           "Porto Ferreira" , "Santa Rita do Passa Quatro",
-           "Tambaú" , "Pirassununga", "Ribeirão Preto",
-           "Jaboticabal" , "Franca" , "São Paulo",
-           "Itirapina" , "Brotas" , "Jaú", "Bauru" ,
-           "Rio Claro"
-   };
+    private List<Produto> produtoList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,24 +34,22 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        listCidade = findViewById(R.id.ListaNomes);
+        recyclerView.findViewById(R.id.listaProdutos);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                getApplication(),
-                android.R.layout.simple_list_item_1,
-                android.R.id.text1,
-                cidades
-        );
-        listCidade.setAdapter(adapter);
 
-        listCidade.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String itemSelecionado= listCidade.getItemAtPosition(position). toString();
-                Toast.makeText(getApplication(), itemSelecionado, Toast.LENGTH_LONG).show();
-            }
-        });
 
+
+
+
+    }
+    public void CriarListaProduto(){
+        Produto produto = new Produto("Iphone 13",
+                "Iphone 13 64gb",
+                200,
+                "10",
+                true);
+
+        produtoList.add(produto);
 
     }
 }

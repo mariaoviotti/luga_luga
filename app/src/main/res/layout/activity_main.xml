@@ -7,10 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
-    <ListView
-        android:id="@+id/ListaNomes"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaProdutos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

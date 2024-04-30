@@ -6,4 +6,8 @@
     <string name="hint_senha">senha</string>
     <string name="btnLogin">Login</string>
     <string name="btnEsqueci">Esquici a senha</string>
+    <string name="tv_produto">Nome Produto</string>
+    <string name="tv_preco">R$ 00,00</string>
+    <string name="tv_descricao">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</string>
+    <string name="logo"></string>
 </resources>

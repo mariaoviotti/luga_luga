@@ -1,20 +1,20 @@
 package com.example.lugaluga;
 
-public class produto {
+public class Produto {
     private String nomeProduto;
     private String descricao;
     private int preco;
     private String quantidade;
     private boolean status;
 
-    public produto(String nomeProduto, String descricao, int preco, String quantidade, boolean status) {
+    public Produto(String nomeProduto, String descricao, int preco, String quantidade, boolean status) {
         this.nomeProduto = nomeProduto;
         this.descricao = descricao;
         this.preco = preco;
         this.quantidade = quantidade;
         this.status = status;
     }
-    public produto(){
+    public Produto(){
 
 
     }
