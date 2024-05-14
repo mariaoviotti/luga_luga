@@ -42,8 +42,12 @@ public class ProdutoActivity extends AppCompatActivity {
 
         alugaBtn = findViewById(R.id.alugaBtn);
 
-        produto = getIntent().getExtras().getParcelable("produto");
 
+        produto = getIntent().getExtras().getParcelable("produto");
+        if (!produto.isStatus()){
+            alugaBtn.setEnabled(false);
+            alugaBtn.setText("Indisponivel");
+        }
         nomeProduto.setText(produto.getNomeProduto());
         qtdProduto.setText(produto.getQuantidade());
         precoProduto.setText(String.valueOf(produto.getPreco()));
@@ -59,7 +63,11 @@ public class ProdutoActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(ProdutoActivity.this, "Concluido", Toast.LENGTH_SHORT).show();
+                        alugaBtn.setText("Solicitado");
+                        alugaBtn.setEnabled(false);
+                        alugaBtn.setBackgroundColor(getColor(R.color.yelow));
                     }
+
                 });
 
                 builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {

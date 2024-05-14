@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 "Iphone 13 64gb",
                 3200,
                 "10",
-                true);
+                false);
 
         produtoList.add(produto);
 
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 "Iphone 14 128gb",
                 4500,
                 "19",
-                true);
+                false);
 
         produtoList.add(produto);
 
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 "Cabo",
                 150,
                 "23",
-                true);
+                false);
 
         produtoList.add(produto);
         produto = new Produto("Samsung s23",
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                 "Macbook Pro Preto 128gb",
                 5500,
                 "9",
-                true);
+                false);
 
         produtoList.add(produto);
         produto = new Produto("Apple Watch",

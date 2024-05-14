@@ -12,4 +12,16 @@
     <string name="logo"></string>
     <string name="tv_qtdProduto">10pc</string>
     <string name="btn_alugar">Alugar</string>
+    <string name="Nome">Nome</string>
+    <string name="CPF">CPF</string>
+    <string name="Data">Data</string>
+    <string name="CEP">CEP</string>
+    <string name="Logradouro">Logradouro</string>
+    <string name="Numero">Numero</string>
+    <string name="Complemento">Complemento</string>
+    <string name="Bairro">Bairro</string>
+    <string name="Cidade">Cidade</string>
+    <string name="UF">UF</string>
+    <string name="Email">Email</string>
+    <string name="Senha">Senha</string>
 </resources>
