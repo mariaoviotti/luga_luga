@@ -24,4 +24,55 @@
     <string name="UF">UF</string>
     <string name="Email">Email</string>
     <string name="Senha">Senha</string>
+
+    <string name="input_nome_user">Nome</string>
+    <string name="input_cpf_user">CPF</string>
+    <string name="input_nascimento_user">Data Nascimento</string>
+    <string name="input_logradouro_user">Logradouro</string>
+    <string name="input_numero_user">Nº</string>
+    <string name="input_complemento_user">Complemento</string>
+    <string name="input_bairro_user">Bairro</string>
+    <string name="input_cep_user">CEP</string>
+    <string name="input_cidade_user">Cidade</string>
+    <string name="input_uf_user">UF</string>
+    <string name="input_email_user">e-mail</string>
+    <string name="input_senha_user">senha</string>
+
+    <string name="btn_cadastrar">Cadastrar</string>
+
+    <string-array name="uf_cadastro">
+
+        <item>AC</item>
+        <item>AL</item>
+        <item>AP</item>
+        <item>AM</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MT</item>
+        <item>MS</item>
+        <item>MG</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PR</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RS</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>SC</item>
+        <item>SP</item>
+        <item>SE</item>
+        <item>TO</item>
+
+    </string-array>
+
+
+
+
 </resources>

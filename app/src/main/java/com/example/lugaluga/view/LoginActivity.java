@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,8 @@ public class LoginActivity extends AppCompatActivity {
     private Button buttonLogin;
     private TextInputLayout inputEmail, inputSenha;
 
+    private Button btnCadastrar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         inputEmail = findViewById(R.id.outlinedTextField);
         inputSenha = findViewById(R.id.outlinedTextField2);
         buttonLogin = findViewById(R.id.button);
+        btnCadastrar = findViewById(R.id.button2);
 
         Intent intent = new Intent(this, MainActivity.class);
 
@@ -39,6 +43,15 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
                     }
 
+            }
+        });
+
+        Intent intentCadastro = new Intent(this, CadastroActivity.class);
+        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(intentCadastro);
             }
         });
     }
