@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         buttonLogin = findViewById(R.id.button);
         btnCadastrar = findViewById(R.id.button2);
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivity2.class);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
