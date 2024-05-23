@@ -85,5 +85,28 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="produto">Produtos</string>
+    <string name="solicitacao">Solicitações</string>
+    <string name="acompanhamento">Acompanhamento</string>
+    <string name="atendimento">Atendimento</string>
+    <string name="sobre1">Luga-Luga</string>
+    <string name="fale">Fale Conosco</string>
+
+    <string name="faleC">Fale Conosco</string>
+
+    <string name="nome">Nome</string>
+
+    <string name="assunto">Assunto</string>
+    <string name="mensagem">Mensagem</string>
+    <string name="enviar">Enviar</string>
+
+    <string name="sobre">Sobre-nós</string>
+    <string name="tudo">Olá a todos,
+
+É com grande entusiasmo que apresento nosso mais recente projeto de desenvolvimento de aplicativo Android. Nosso time tem trabalhado arduamente para criar uma experiência excepcional para nossos usuários, combinando inovação, funcionalidade e design intuitivo.
+Com uma interface limpa e amigável, nosso aplicativo oferece uma experiência de usuário fluida e agradável. Além disso, incorporamos recursos avançados que visam otimizar a produtividade e tornar as tarefas cotidianas mais simples e eficientes.
+    </string>
+
+
 
 </resources>
