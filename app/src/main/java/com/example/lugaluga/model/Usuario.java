@@ -2,18 +2,16 @@ package com.example.lugaluga.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.provider.ContactsContract;
 
 import androidx.annotation.NonNull;
-
-import java.util.Date;
 
 public class Usuario implements Parcelable {
     private String nome;
     private String CPF;
-    private Date dataNasc;
+    private String dataNasc;
     private String CEP;
     private  String cidade;
+    private  String telefone;
     private String uf;
     private String logradouro;
 
@@ -27,7 +25,7 @@ public class Usuario implements Parcelable {
 
     private String senha;
 
-    public Usuario(String nome, String CPF, Date dataNasc, String CEP, String cidade, String uf, String logradouro, String numero, String complemento, String bairro, String email, String senha) {
+    public Usuario(String nome, String CPF, String dataNasc, String CEP, String cidade, String uf, String logradouro, String numero, String complemento, String bairro, String email, String senha) {
         this.nome = nome;
         this.CPF = CPF;
         this.dataNasc = dataNasc;
@@ -84,11 +82,11 @@ public class Usuario implements Parcelable {
         this.CPF = CPF;
     }
 
-    public Date getDataNasc() {
+    public String getDataNasc() {
         return dataNasc;
     }
 
-    public void setDataNasc(Date dataNasc) {
+    public void setDataNasc(String dataNasc) {
         this.dataNasc = dataNasc;
     }
 
@@ -124,12 +122,20 @@ public class Usuario implements Parcelable {
         this.logradouro = logradouro;
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return numero;
     }
 
     public void setNumero(String numero) {
         this.numero = numero;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public String getComplemento() {
@@ -140,7 +146,7 @@ public class Usuario implements Parcelable {
         this.complemento = complemento;
     }
 
-    public String getBairro() {
+    public int getBairro() {
         return bairro;
     }
 
