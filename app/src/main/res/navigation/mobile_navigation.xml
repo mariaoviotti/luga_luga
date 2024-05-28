@@ -33,7 +33,11 @@
         android:id="@+id/nav_atendimento"
         android:name="com.example.lugaluga.view.AtendimentoFragment"
         android:label="Atendimento"
-        tools:layout="@layout/fragment_atendimento"/>
+        tools:layout="@layout/fragment_atendimento">
+        <action
+            android:id="@+id/action_nav_atendimento_self"
+            app:destination="@id/nav_atendimento" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_sobre"
