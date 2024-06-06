@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.lugaluga.Produto;
 import com.example.lugaluga.R;
 import com.example.lugaluga.RecyclerItemClickListener;
+import com.example.lugaluga.controller.ProdutosController;
 import com.example.lugaluga.view.adapter.AdapterProduto;
 
 import java.util.ArrayList;
@@ -104,82 +105,8 @@ public class ProdutoFragment extends Fragment {
 
     public void CriarListaProduto() {
 
-        Produto produto;
-
-        produto = new Produto("Iphone 13",
-                "Iphone 13 64gb",
-                3200,
-                "10",
-                false);
-
-        produtoList.add(produto);
-
-        produto = new Produto("Fone",
-                "Bluetooth",
-                1300,
-                "15",
-                true);
-
-        produtoList.add(produto);
-        produto = new Produto("Iphone 14",
-                "Iphone 14 128gb",
-                4500,
-                "19",
-                false);
-
-        produtoList.add(produto);
-
-        produto = new Produto("CD",
-                "Disco",
-                100,
-                "13",
-                true);
-
-        produtoList.add(produto);
-
-        produto = new Produto("USB",
-                "Cabo",
-                150,
-                "23",
-                false);
-
-        produtoList.add(produto);
-        produto = new Produto("Samsung s23",
-                "Samsung s23 64gb",
-                3000,
-                "45",
-                true);
-
-        produtoList.add(produto);
-        produto = new Produto("Samsung galaxy A",
-                "Samsung galaxy A 64gb",
-                2300,
-                "78",
-                true);
-
-        produtoList.add(produto);
-        produto = new Produto("Macbook Pro",
-                "Macbook Pro Preto 128gb",
-                5500,
-                "9",
-                false);
-
-        produtoList.add(produto);
-        produto = new Produto("Apple Watch",
-                "Cor preta",
-                3562,
-                "34",
-                true);
-
-        produtoList.add(produto);
-        produto = new Produto("Iphone 11",
-                "Iphone 11 256gb",
-                2300,
-                "56",
-                true);
-
-        produtoList.add(produto);
-
+        ProdutosController produtosController = new ProdutosController(getContext());
+        produtoList.addAll(produtosController.carregaProdutos());
     }
 
 }

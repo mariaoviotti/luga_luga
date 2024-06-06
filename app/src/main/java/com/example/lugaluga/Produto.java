@@ -8,11 +8,11 @@ import androidx.annotation.NonNull;
 public class Produto implements Parcelable {
     private String nomeProduto;
     private String descricao;
-    private int preco;
-    private String quantidade;
+    private Double preco;
+    private int quantidade;
     private boolean status;
 
-    public Produto(String nomeProduto, String descricao, int preco, String quantidade, boolean status) {
+    public Produto(String nomeProduto, String descricao, Double preco, int quantidade, boolean status) {
         this.nomeProduto = nomeProduto;
         this.descricao = descricao;
         this.preco = preco;
@@ -27,8 +27,8 @@ public class Produto implements Parcelable {
     protected Produto(Parcel in) {
         nomeProduto = in.readString();
         descricao = in.readString();
-        preco = in.readInt();
-        quantidade = in.readString();
+        preco = in.readDouble();
+        quantidade = in.readInt();
         status = in.readByte() != 0;
     }
 
@@ -36,8 +36,8 @@ public class Produto implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(nomeProduto);
         dest.writeString(descricao);
-        dest.writeInt(preco);
-        dest.writeString(quantidade);
+        dest.writeDouble(preco);
+        dest.writeInt(quantidade);
         dest.writeByte((byte) (status ? 1 : 0));
     }
 
@@ -69,19 +69,19 @@ public class Produto implements Parcelable {
         this.descricao = descricao;
     }
 
-    public int getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(int preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
-    public String getQuantidade() {
+    public int getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(String quantidade) {
+    public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
 
