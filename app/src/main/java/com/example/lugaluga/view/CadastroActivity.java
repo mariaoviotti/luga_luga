@@ -63,6 +63,8 @@ public class CadastroActivity extends AppCompatActivity {
 
         inputDataNasc = findViewById(R.id.input_data);
 
+        btnCadastrar = findViewById(R.id.btn_cadastrar);
+
 
 
         inputDataNasc.getEditText().addTextChangedListener(new TextWatcher() {
@@ -274,7 +276,7 @@ public class CadastroActivity extends AppCompatActivity {
                     usuario.setCidade(input_cidade.getEditText().getText().toString());
                     usuario.setUf(spinnerUf.getSelectedItem().toString());
                     usuario.setLogradouro(input_logradouro.getEditText().getText().toString());
-                    usuario.setNumero(input_numero.getEditText().getText().toString());
+                    usuario.setNumero(Integer.parseInt(input_numero.getEditText().getText().toString()));
                     usuario.setComplemento(input_complemento.getEditText().getText().toString());
                     usuario.setBairro(input_bairro.getEditText().getText().toString());
                     usuario.setEmail(input_email.getEditText().getText().toString());
@@ -284,8 +286,8 @@ public class CadastroActivity extends AppCompatActivity {
                     String resultado;
                     resultado = crud.insereDados(usuario.getNome(),usuario.getCPF(),usuario.getDataNasc(),
                                 usuario.getCEP(), usuario.getCidade(), usuario.getLogradouro(),
-                                usuario.getNumero(), usuario.getComplemento(), usuario.getTelefone(),
-                                usuario.getBairro(), usuario.getEmail(), usuario.getSenha(), usuario.getUf());
+                                usuario.getNumero(), usuario.getComplemento(),
+                                usuario.getBairro(), 0, usuario.getEmail(), usuario.getSenha(), usuario.getUf());
 
                     Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
 

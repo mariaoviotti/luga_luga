@@ -15,7 +15,7 @@ public class Usuario implements Parcelable {
     private String uf;
     private String logradouro;
 
-    private String numero;
+    private int numero;
 
     private String complemento;
 
@@ -25,7 +25,10 @@ public class Usuario implements Parcelable {
 
     private String senha;
 
-    public Usuario(String nome, String CPF, String dataNasc, String CEP, String cidade, String uf, String logradouro, String numero, String complemento, String bairro, String email, String senha) {
+    public Usuario() {
+    }
+
+    public Usuario(String nome, String CPF, String dataNasc, String CEP, String cidade, String uf, String logradouro, int numero, String complemento, String bairro, String email, String senha) {
         this.nome = nome;
         this.CPF = CPF;
         this.dataNasc = dataNasc;
@@ -47,7 +50,7 @@ public class Usuario implements Parcelable {
         cidade = in.readString();
         uf = in.readString();
         logradouro = in.readString();
-        numero = in.readString();
+        numero = in.readInt();
         complemento = in.readString();
         bairro = in.readString();
         email = in.readString();
@@ -122,11 +125,7 @@ public class Usuario implements Parcelable {
         this.logradouro = logradouro;
     }
 
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 
@@ -144,10 +143,6 @@ public class Usuario implements Parcelable {
 
     public void setComplemento(String complemento) {
         this.complemento = complemento;
-    }
-
-    public int getBairro() {
-        return bairro;
     }
 
     public void setBairro(String bairro) {
@@ -170,6 +165,14 @@ public class Usuario implements Parcelable {
         this.senha = senha;
     }
 
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -183,7 +186,7 @@ public class Usuario implements Parcelable {
         dest.writeString(cidade);
         dest.writeString(uf);
         dest.writeString(logradouro);
-        dest.writeString(numero);
+        dest.writeInt(numero);
         dest.writeString(complemento);
         dest.writeString(bairro);
         dest.writeString(email);
