@@ -11,11 +11,8 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.example.lugaluga.Produto;
+import com.example.lugaluga.model.Produto;
 import com.example.lugaluga.R;
 
 public class ProdutoActivity extends AppCompatActivity {
@@ -49,7 +46,7 @@ public class ProdutoActivity extends AppCompatActivity {
             alugaBtn.setText("Indisponivel");
         }
         nomeProduto.setText(produto.getNomeProduto());
-        qtdProduto.setText(produto.getQuantidade());
+        qtdProduto.setText(String.valueOf(produto.getQuantidade()));
         precoProduto.setText(String.valueOf(produto.getPreco()));
         descProduto.setText(produto.getDescricao());
 

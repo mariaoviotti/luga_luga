@@ -1,9 +1,7 @@
-package com.example.lugaluga;
+package com.example.lugaluga.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import androidx.annotation.NonNull;
 
 public class Produto implements Parcelable {
     private String nomeProduto;
