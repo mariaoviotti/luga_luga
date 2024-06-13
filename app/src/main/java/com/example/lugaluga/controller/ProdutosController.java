@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.lugaluga.Produto;
+import com.example.lugaluga.model.Produto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +31,7 @@ public class ProdutosController {
                 produto.setDescricao(cursor.getString(2));
                 produto.setPreco(Double.parseDouble(cursor.getString(3)));
                 produto.setQuantidade(Integer.parseInt(cursor.getString(4)));
+                produto.setStatus(cursor.getString(5).equals("disponivel"));
                 produtoList.add(produto);
             }
         }

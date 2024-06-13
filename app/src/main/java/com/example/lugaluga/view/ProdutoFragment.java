@@ -15,7 +15,7 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.example.lugaluga.Produto;
+import com.example.lugaluga.model.Produto;
 import com.example.lugaluga.R;
 import com.example.lugaluga.RecyclerItemClickListener;
 import com.example.lugaluga.controller.ProdutosController;

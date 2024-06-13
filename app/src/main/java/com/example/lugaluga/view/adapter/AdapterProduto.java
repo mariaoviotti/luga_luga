@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.lugaluga.Produto;
+import com.example.lugaluga.model.Produto;
 import com.example.lugaluga.R;
 
 import java.util.List;

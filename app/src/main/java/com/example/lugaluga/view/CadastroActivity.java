@@ -27,6 +27,8 @@ import java.util.regex.Pattern;
 
 public class CadastroActivity extends AppCompatActivity {
     private Spinner spinnerUf;
+    private Button consultar;
+
 
     private TextInputLayout inputEmail;
     private TextInputLayout inputCpf, input_nome, input_data , input_cep,
@@ -283,13 +285,30 @@ public class CadastroActivity extends AppCompatActivity {
                     usuario.setSenha(input_senha.getEditText().getText().toString());
 
 
-                    String resultado;
+                    boolean resultado;
+
                     resultado = crud.insereDados(usuario.getNome(),usuario.getCPF(),usuario.getDataNasc(),
                                 usuario.getCEP(), usuario.getCidade(), usuario.getLogradouro(),
                                 usuario.getNumero(), usuario.getComplemento(),
                                 usuario.getBairro(), 0, usuario.getEmail(), usuario.getSenha(), usuario.getUf());
 
-                    Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+                    if(resultado) {
+
+                        Toast.makeText(getApplicationContext(), "Inserido com sucesso", Toast.LENGTH_LONG).show();
+                        finish();
+                    }else {
+
+                        Toast.makeText(getApplicationContext(), "Erro na inserção", Toast.LENGTH_LONG).show();
+
+
+                    }
+
+                }
+            });
+            consultar.findViewById(R.id.btn_buscar);
+            consultar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
                 }
             });
