@@ -40,6 +40,14 @@
     </fragment>
 
     <fragment
+        android:id="@+id/nav_usuario"
+        android:name="com.example.lugaluga.view.UsuariosCadastradosFragment"
+        android:label="Usuario"
+        tools:layout="@layout/fragment_usuarios_cadastrados"
+
+        />
+
+    <fragment
         android:id="@+id/nav_sobre"
         android:name="com.example.lugaluga.view.SobreFragment"
         android:label="Sobre nós"
